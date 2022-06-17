@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Responsive | Zuri task</title>
+</head>
+<body>
+        <div class="learn">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
+        </div>
+        <div>
+            <button id="try"><span id="break"><b>Try it free 7 days</b> then $20/mo. thereafter</span></button>
+            <form action="">
+                <div>
+                    <input type="text" name="" id="firstname" placeholder="First Name" required>
+                    <i class="fa fa-exclamation-circle" id="second1"></i>
+                    <small id="smaller1">First Name cannot be empty</small>
+                </div>
+                <div>
+                    <input type="text" name="" id="lastname" placeholder="Last Name" required>
+                    <i class="fa fa-exclamation-circle" id="second2"></i>
+                    <small id="smaller2">Last Name cannot be empty</small>
+                </div>
+                <div>
+                    <input type="email" id="email"pattern= '.+@.+\..+' placeholder="Email Address" required>
+                    <i class="fa fa-exclamation-circle" id="second3"></i>
+                    <small id="smaller3">Looks like this is not an email</small>
+                </div>
+                <div>
+                    <input type="password" id="password" minlength="6" maxlength="12" placeholder="Password" required>
+                    <i class="fa fa-exclamation-circle" id="second4"></i>
+                    <small id="smaller4">Password cannot be empty</small>
+                </div>
+                <div>
+                    <input type="submit" id="claim" value="CLAIM YOUR FREE TRIAL">
+                    <small id="small">By clicking the button, you are agreeing to our <span><b>Terms and Services</b></span></small>
+                </div>
+            </form>
+        </div>
+
+
+        <script>
+            let check = document.getElementById('claim');
+            let isEmpty = document.getElementById('firstname');
+            let isEmpty2 = document.getElementById('lastname');
+            let isEmpty3 = document.getElementById('email');
+            let isEmpty4 = document.getElementById('password');
+
+
+            check.addEventListener('click', () => {
+                if (isEmpty.value == "" && isEmpty2.value == "" && isEmpty3.value == "" && isEmpty4.value == "") {
+                    document.getElementById('smaller1').style.display = 'block';
+                    document.getElementById('smaller2').style.display = 'block';
+                    document.getElementById('smaller3').style.display = 'block';
+                    document.getElementById('smaller4').style.display = 'block';
+
+
+                    document.getElementById('second1').style.display = 'block';
+                    document.getElementById('second2').style.display = 'block';
+                    document.getElementById('second3').style.display = 'block';
+                    document.getElementById('second4').style.display = 'block';
+
+                    isEmpty.style.border = '1px solid rgb(242, 78, 78)';
+                    isEmpty2.style.border = '1px solid rgb(242, 78, 78)';
+                    isEmpty3.style.border = '1px solid rgb(242, 78, 78)';
+                    isEmpty4.style.border = '1px solid rgb(242, 78, 78)';
+
+                    isEmpty.placeholder = '';
+                    isEmpty2.placeholder = '';
+                    isEmpty3.placeholder = 'example@email.com';
+                    isEmpty4.placeholder = '';
+
+                }
+            })
+        </script>
+</body>
+</html>
