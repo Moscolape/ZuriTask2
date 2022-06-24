@@ -83,28 +83,18 @@ input[type=text], input[type=email], input[type=password] {
     color: rgb(242, 78, 78);   
 }
 
-#second1 {
-    top: 9.5rem;
-}
-
-#second2 {
-    top: 15rem;
-}
-
-#second3 {
-    top: 20.4rem; 
-}
-
-#second4 {
-    top: 25.7rem;
-}
 
 #second1, #second2, #second3, #second4 {
     display: none;
     position: absolute;
-    right: 6rem;
+    right: 0.5rem;
+    top: 0.7rem;
     color: rgb(242, 78, 78);
     font-size: 18px;
+}
+
+.input {
+    position: relative;
 }
 
 #small {
@@ -173,24 +163,5 @@ span {
         margin: auto;
     }
 
-    #second1 {
-        top: 27rem;
-        right: 20%;
-    }
-
-    #second2 {
-        top: 32.5rem;
-        right: 20%;
-    }
-
-    #second3 {
-        top: 37.9rem;
-        right: 20%;
-    }
-
-    #second4 {
-        top: 43.2rem;
-        right: 20%;
-    }
 
 }
